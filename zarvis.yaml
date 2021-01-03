@@ -5,5 +5,5 @@ deploy:                               # (Required) Precisely one of 'buildpack',
     service: service                  # Name of a Service to create, so ingress can connect. Defaults to 'service'.
     port: 9312                        # Port number to configure in the Service. Defaults to '8080'.
 ingress:                              # Ingress configures https endpoints.
-- service:                            # Name of a Service to connect. Defaults to 'service'
+- service: sajjad                            # Name of a Service to connect. Defaults to 'service'
   port: 9312                               # Port number of the service. Defaults to '8080'
