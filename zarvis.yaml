@@ -2,8 +2,9 @@ apiVersion: beta/v1
 deploy:                               # (Required) Precisely one of 'buildpack', 'docker', 'skaffold' must be set.
   docker:                             # Build Dockerfile and deploy.
     file: Dockerfile                  # locates the Dockerfile relative to workspace. Defaults to 'Dockerfile'.
-    service: sajjad                  # Name of a Service to create, so ingress can connect. Defaults to 'service'.
+    service: service                  # Name of a Service to create, so ingress can connect. Defaults to 'service'.
     port: 9312                        # Port number to configure in the Service. Defaults to '8080'.
 ingress:
-- sajjad:
+- service:
+  serviceName: service
   port: 9312
