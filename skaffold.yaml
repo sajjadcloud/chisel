@@ -1,7 +1,12 @@
 apiVersion: skaffold/v1
 kind: Config
+build:
+  artifacts:
+  - image: my/cool_project
 deploy:
-  skaffold: {}            # make sure empty object is assigned
+  kubectl:
+    manifests:
+    - k8s.yaml
 ingress:
   - serviceName: my-service   # name of a Kubernetes Service resource want to connect to the public endpoint
     port: 9312
