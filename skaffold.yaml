@@ -1,4 +1,5 @@
-apiVersion: beta/v1
+apiVersion: skaffold/v1
+kind: Config
 deploy:
   skaffold: {}            # make sure empty object is assigned
 ingress:
