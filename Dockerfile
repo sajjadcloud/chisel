@@ -14,4 +14,5 @@ FROM alpine
 RUN apk update && apk add --no-cache ca-certificates
 WORKDIR /app
 COPY --from=build-env /src/chisel /app/chisel
+EXPOSE 9312
 ENTRYPOINT ["/app/chisel","server","-p","9312","--socks5","--key","supersecret"]
